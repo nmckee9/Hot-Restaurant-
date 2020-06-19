@@ -24,6 +24,7 @@ app.get("/routes/reserve", (req, res) =>
     res.sendFile(path.join(__dirname, "reserve.html"))
 );
 
+<<<<<<< HEAD
 app.get("/reservations", function (req, res) {
     return res.json(reservations);
 });
@@ -37,6 +38,8 @@ app.get("/reservationlength", (req, res) => {
     return reservations.length
 
 })
+=======
+>>>>>>> 6876a0d5bed37307a2aea7a5b3f3be14673b8549
 
 // app.post("/routes/reserve", function (req, res) {
 //     const newReservation = req.body;
@@ -53,6 +56,7 @@ app.get("/reservationlength", (req, res) => {
 
 
 
+<<<<<<< HEAD
 //=======================for tables html
 
 $.ajax({
@@ -66,6 +70,12 @@ $.ajax({
             $("#currentRes")
         });
     })
+=======
+
+
+
+
+>>>>>>> 6876a0d5bed37307a2aea7a5b3f3be14673b8549
 
 $.ajax({
     url: "http://localhost:3001/waitlist",
