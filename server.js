@@ -39,8 +39,6 @@ app.get("/reservationlength", (req, res) => {
 
 })
 
-
-
 // app.post("/routes/reserve", function (req, res) {
 //     const newReservation = req.body;
 //     // newCharacter.routeName = newCharacter.name.replace(/\s+/g, "").toLowerCase();
@@ -63,13 +61,13 @@ $.ajax({
     url: "http://localhost:3001/reservations",
     type: "GET"
 })
-    .then(response => {
-        response.forEach(el => {
-            const newID = el.customerID
-            const newIndex = response.indexOf(el) + 1
-            $("#currentRes")
-        });
-    })
+.then(response =>{
+    response.forEach(el => {
+        const newID = el.customerID
+        const newIndex = response.indexOf(el)+1
+        $("#currentRes")
+    });
+})
 
 $.ajax({
     url: "http://localhost:3001/waitlist",
@@ -116,8 +114,6 @@ $.ajax({
             }
         })
 </script >
-
-
 
 app.listen(PORT, () =>
     console.log("App listening on PORT " + PORT)
