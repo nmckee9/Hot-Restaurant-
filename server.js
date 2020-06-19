@@ -34,9 +34,8 @@ app.get("/waitlist", function(req, res) {
 
 app.post("/routes/reserve", function(req, res) {
     const newReservation = req.body;
-    // newCharacter.routeName = newCharacter.name.replace(/\s+/g, "").toLowerCase();
     console.log(newReservation);
-    if (reservations.length <= 5){
+    if (reservations.length < 5){
         reservations.push(newReservation);
     }
     else {
@@ -77,13 +76,12 @@ $.ajax({
       $.post("/reservations", newReservation)
         .then(function(data) {
           console.log("add.html", data);
-          alert("Adding character...");
         });
     });
   </script>
 
 
-
+//=================
 
 
 
